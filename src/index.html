@@ -8,15 +8,27 @@
 </head>
 <body>
     <div class="container">
-        <h1>Calcule seu IMC</h1>
-        <form action="/" id="formulario" method="post">
-            <label for="peso">Peso</label>
-            <input type="text" id="peso" name="peso">
-            <label for="altura">Altura</label>
-            <input type="text" id="altura" name="altura">
-            <button type="submit">Enviar</button>
-        </form>
-        <div class="resultado"></div>
+        <!-- <div class="image">
+            <img src="assets/img/illustration.svg" alt="illustration">
+        </div> -->
+
+        <div class="form">
+            <h1>Calcule seu IMC</h1>
+            <form action="/" id="formulario" method="post">
+                <div class="input-field">
+                    <input type="text" id="peso" name="peso">
+                    <label for="peso">Peso</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="altura" name="altura">
+                    <label for="altura">Altura</label>
+                </div>
+
+                <button type="submit">Enviar</button>
+                <!-- <button type="reset">Limpar</button> -->
+            </form>
+            <div class="resultado"></div>
+        </div>
     </div>
     <script src="assets/js/app.js"></script>
 </body>

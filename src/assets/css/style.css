@@ -63,6 +63,8 @@ form button:hover {
   background: var(--primary-color-darker);
 }
 
+
+
 .paragrafo-resultado, .bad {
   text-align: center;
   background: rgb(109, 255, 182);

@@ -12,7 +12,7 @@ form.addEventListener('submit', function(event) {
 
     if (!peso) {
         setResultado('Peso inválido', false);
-        return;
+        return; //fazer a validação com if 
     }
     if (!altura) {
         setResultado('Altura inválida', false);
