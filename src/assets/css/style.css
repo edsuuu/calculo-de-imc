@@ -37,12 +37,18 @@ body {
   padding: 30px 30px 40px 30px;
   width: 400px;
 }
+
 .form h1 {
   text-align: center;
   margin: 30px;
   color: white;
   font-size: 2.5em;
 }
+
+input:focus {
+  outline: none;
+}
+
 .input-field {
   display: flex;
   flex-direction: column;
@@ -75,13 +81,25 @@ body {
 }
 
 button {
-  
+  border: none;
+  background-color: white;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 10px;
   padding: 10px 30px 10px 30px;
+  cursor: pointer;
 }
 
+button:hover {
+  color: white;
+  background-color: #91b5aa69;
+  transition: .3s;
+}
 
 /* resposta do que o java script irar clocar  */
 .paragrafo-resultado, .bad {
+  width: 70%;
+  margin: auto;
   text-align: center;
   background: rgb(109, 255, 182);
   padding: 10px 20px;
@@ -91,4 +109,39 @@ button {
 
 .bad {
   background: rgb(255, 150, 150);
+}
+
+@media (max-width: 960px) {
+  html{
+    font-size: 80%;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .formulario {
+    margin: auto;
+    width: 300px;
+  }
+
+  .image img {
+    margin-top: 30%;
+    width: 200px;
+  }
+
+  .input-field input {
+    color: white;
+    background: transparent; 
+    width: 200px;
+  }
+}
+
+@media (max-width: 350px) {
+  .formulario{
+    width: 210px;
+  }
+  .input-field input {
+    color: white;
+    background: transparent; 
+    width: 200px;
+  }
 }
