@@ -6,10 +6,17 @@ form.addEventListener('submit', function(event) {
     event.preventDefault(); //para cancelar o envio do formulario para outra pagina 
     const inputPeso = event.target.querySelector('#peso'); // capturar as informaçoes 
     const inputAltura = event.target.querySelector('#altura'); //capturar as informaçoes 
+    const inputNome = event.target.querySelector('#nome');
 
     const peso = Number(inputPeso.value);
     const altura = Number(inputAltura.value); // ultilizando a tag number para nao voltar como string
+    const nome = (inputNome.value);
 
+    if (!nome) {
+        setResultado('Nome inválido', false);
+        return;
+    } 
+    
     if (!peso) {
         setResultado('Peso inválido', false);
         return; //fazer a validação com if 
@@ -19,9 +26,10 @@ form.addEventListener('submit', function(event) {
         return;
     }
     
+    
     const imc = getImc(peso, altura);
     const nivelImc = getNivelImc(imc);
-    const msg = `Seu IMC é ${imc} (${nivelImc}).`;
+    const msg = `${nome} Seu IMC é ${imc} (${nivelImc}).`;
 
     setResultado(msg, true);
     console.log(imc, nivelImc);
