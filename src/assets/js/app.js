@@ -12,6 +12,11 @@ form.addEventListener('submit', function(event) {
     const altura = Number(inputAltura.value); // ultilizando a tag number para nao voltar como string
     const nome = (inputNome.value);
 
+    //criei essas 2 novas variaveis para poder fazer a conversao de metros para centimetros no recebimento da varialvel "altura"
+
+    const convertendoAltura = altura / 100; // para fazer a conversao de metros para centimetros
+    const alturaConvertida = convertendoAltura.toFixed(2); // para arredondar o valor para duas casas decimais= metros.toFixed(2);
+
     if (!nome) {
         setResultado('Nome inválido', false);
         return;
@@ -27,7 +32,7 @@ form.addEventListener('submit', function(event) {
     }
     
     
-    const imc = getImc(peso, altura);
+    const imc = getImc(peso, alturaConvertida); //mudei aqui de altura para alturaConvertida
     const nivelImc = getNivelImc(imc);
     const msg = `${nome} Seu IMC é ${imc} (${nivelImc}).`;
 
