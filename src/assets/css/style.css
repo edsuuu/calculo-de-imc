@@ -24,17 +24,19 @@ body {
 }
 
 .image img {
+  margin-top: 50%;
   width: 600px;
 }
 
 .formulario {
+  
   align-self: center;
   background-color: #252569;
   border-radius: 20px;
   box-shadow: 4px 6px 22px rgba(0, 0, 0, 0.7);
   height: 400px;
   margin-left: -5%;
-  margin-top: -15%;
+  
   padding: 30px 30px 40px 30px;
   width: 400px;
 }
@@ -93,7 +95,7 @@ button {
 
 button:hover {
   color: white;
-  background-color: #91b5aa69;
+  background-color: #7ba59969;
   transition: .3s;
 }
 
