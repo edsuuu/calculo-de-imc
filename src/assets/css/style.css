@@ -12,7 +12,6 @@ body {
 .container {
   display: flex; 
   justify-content: space-around;
-  ;
   height: 100vh;
 }
 
@@ -36,7 +35,6 @@ body {
   box-shadow: 4px 6px 22px rgba(0, 0, 0, 0.7);
   height: 400px;
   margin-left: -5%;
-  
   padding: 30px 30px 40px 30px;
   width: 400px;
 }
